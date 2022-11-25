@@ -1,6 +1,6 @@
 package com.ttasm.client.pojo;
 
-public class Tricket {
+public class Ticket {
 
     private String ticketId;
 

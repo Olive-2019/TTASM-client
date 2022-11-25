@@ -73,6 +73,7 @@ public class Orders {
      * @mbg.generated
      */
     public void setClientName(String clientName) {
+
         this.clientName = clientName == null ? null : clientName.trim();
     }
 
