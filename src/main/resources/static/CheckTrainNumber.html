@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>TTASM</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Login</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="all,follow">
+	<!-- Bootstrap CSS-->
+	<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!-- Font Awesome CSS-->
+	<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+	<!-- Fontastic Custom icon font-->
+	<link rel="stylesheet" href="css/fontastic.css">
+	<!-- Google fonts - Roboto -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+	<!-- jQuery Circle-->
+	<link rel="stylesheet" href="css/grasp_mobile_progress_circle-1.0.0.min.css">
+	<!-- Custom Scrollbar-->
+	<link rel="stylesheet" href="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+	<!-- theme stylesheet-->
+	<link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+	<!-- Custom stylesheet - for your changes-->
+	<link rel="stylesheet" href="css/custom.css">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/favicon.ico">
+</head>
+<body>
+
+	<script src="js/include.js"></script>
+	<include src="left.html"></include>
+	<script src="page-js/global.js"></script>
+	<script src = "vendor/jquery/jquery.min.js"></script>
+	<script src = "page-js/CheckTrainNumber.js"></script>
+	<div class="page login-page">
+		<div class="container">
+			<div class="form-outer text-center d-flex align-items-center">
+				<div class="form-inner">
+					<div class="logo text-uppercase"><span>选择</span><strong class="text-primary">出发地与目的地</strong></div>
+
+					<!--                <form class="text-left form-validate" action="/Manage_Train/add_train" method="GET">-->
+					<div class="form-group-material">
+						<input id="startingStation" type="text" name="startingStation"  class="input-material" placeholder = "出发站点">
+					</div>
+					<div class="form-group-material">
+						<input id="endingStation" type="text" name="endingStation" placeholder = "到达站点" class="input-material">
+					</div>
+					<div class="form-group text-center">
+						<input id="check" type="submit" value="查询" class="btn btn-primary" onclick = "showData()">
+					</div>
+					<div id="wrapper">
+						<div id = "header"></div>
+						<div id="page-wrapper" >
+							<div id="page-inner">
+								<div class="row">
+									<div class="col-md-12">
+										<h1 class="page-header">
+											车次详细信息
+										</h1>
+									</div>
+								</div>
+								<!-- /. ROW  -->
+
+								<div class="row">
+									<div class="col-md-12">
+										<!-- Advanced Tables -->
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												列车
+											</div>
+											<div class="panel-body">
+												<div class="table-responsive">
+													<table class="table table-striped table-bordered table-hover" id="dataTables-example">
+														<thead>
+														<tr>
+															<th>车次编号</th>
+															<th>列车编号</th>
+															<th>出发时间</th>
+															<th>始发站</th>
+															<th>终点站</th>
+															<th>价格</th>
+															<th>选座</th>
+															<!--														<th>删除车次</th>-->
+														</tr>
+														</thead>
+														<tbody id = "trainNumberTable">
+														<tr class="odd gradeX" hidden = 'true'>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td><input type="button" value = "选座"></td>
+															<!--														<td><input type="button" value = "删除"></td>-->
+														</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="logo text-uppercase"><span>选择</span><strong class="text-primary">座位</strong></div>
+
+					<select name="seat" id="seat"  class="form-control">
+<!--						<option value="sampler">核酸采样员</option>-->
+<!--						<option value="commiter">核酸结果提交人员</option>-->
+					</select>
+					<div class="form-group text-center">
+						<input id="select" type="submit" value="购票" class="btn btn-primary" onclick = "">
+					</div>
+					<!--                </form>-->
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>

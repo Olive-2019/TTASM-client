@@ -22,6 +22,11 @@ public interface Train_NumberMapper {
     @Select("select * from train_number")
     List<Train_Number> selectAll();
 
+    @Select("select * from train_number where starting_station = #{startingStation} and ending_station = #{endingStation}")
+    List<Train_Number> selectByStartingStationAndEndingStation(String startingStation, String endingStation);
+
     @Update("UPDATE `train_number` SET `train_ID` = #{train_id}, `starting_time` = #{starting_time}, `price` = #{price}, `starting_station` = #{starting_station}, `ending_station` = #{ending_station} WHERE (`train_number` = #{train_number});")
     int updateByPrimaryKey(Train_Number row);
+
+
 }
