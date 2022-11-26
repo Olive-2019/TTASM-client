@@ -8,7 +8,7 @@ public class Orders {
      *
      * @mbg.generated
      */
-    private String ticketId;
+    private String ticket_id;
 
     /**
      *
@@ -17,7 +17,7 @@ public class Orders {
      *
      * @mbg.generated
      */
-    private String clientName;
+    private String client_name;
 
     /**
      *
@@ -37,7 +37,7 @@ public class Orders {
      * @mbg.generated
      */
     public String getTicketId() {
-        return ticketId;
+        return ticket_id;
     }
 
     /**
@@ -49,7 +49,7 @@ public class Orders {
      * @mbg.generated
      */
     public void setTicketId(String ticketId) {
-        this.ticketId = ticketId == null ? null : ticketId.trim();
+        this.ticket_id = ticketId == null ? null : ticketId.trim();
     }
 
     /**
@@ -61,7 +61,7 @@ public class Orders {
      * @mbg.generated
      */
     public String getClientName() {
-        return clientName;
+        return client_name;
     }
 
     /**
@@ -73,8 +73,7 @@ public class Orders {
      * @mbg.generated
      */
     public void setClientName(String clientName) {
-
-        this.clientName = clientName == null ? null : clientName.trim();
+        this.client_name = clientName == null ? null : clientName.trim();
     }
 
     /**

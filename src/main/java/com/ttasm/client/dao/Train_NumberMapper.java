@@ -16,7 +16,7 @@ public interface Train_NumberMapper {
     @Insert("insert into train_number values(#{train_id}, #{starting_time}, #{price}, #{train_number}, #{starting_station}, #{ending_station})")
     int insert(Train_Number row);
 
-    @Select("select * from train_number where `train_number`=trainNumber")
+    @Select("select * from train_number where `train_number`=#{trainNumber}")
     Train_Number selectByPrimaryKey(String trainNumber);
 
     @Select("select * from train_number")

@@ -32,7 +32,7 @@ public class Return {
         for (Orders order : orders) {
             System.out.println(orders.get(0).getTicketId());
             Ticket ticket = ticketMapper.selectByPrimaryKey(order.getTicketId());
-            System.out.println(ticket.getTicketId());
+            System.out.println(ticket.getTicketId()+" "+ticket.getTrainNumber());
             Train_Number train_number = train_numberMapper.selectByPrimaryKey(ticket.getTrainNumber());
             String str = ticket.getTicketId() + " " + train_number.getStartingStation() + "->" + train_number.getEndingStation() + " " + train_number.getStartingTime();
             ret.add(str);

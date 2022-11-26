@@ -17,7 +17,9 @@ window.onload=function () {
             var len=data.length;
             for(var i=0;i<len;i++){
                 var option=option_example.cloneNode(true);
-                option.innerText=JSON.stringify(data[i]);
+                var str=JSON.stringify(data[i]);
+                str=str.slice(1,str.length-1);
+                option.innerText=str;
                 dataList.append(option);
             }
         },
@@ -27,5 +29,28 @@ window.onload=function () {
     });
 };
 function Return() {
+    var args=get_url_values();
 
+    var str=document.getElementById("tickets").value;
+    var ticket_id=str.split(" ")[0];
+    alert(str);
+    alert(ticket_id);
+    var data = {
+        "ticket_id" : ticket_id
+    };
+    var url=get_nap() + "Return/return_ticket";
+    $.ajax({
+        type: "get",
+        url: url,
+        async: false,
+        data: data,
+        success: function(data){
+            alert("退票成功")
+            var href=window.location.href;
+            window.location=href;
+        },
+        error: function (error) {
+            alert(JSON.stringify(error));
+        }
+    });
 }

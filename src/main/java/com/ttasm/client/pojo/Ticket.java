@@ -2,28 +2,28 @@ package com.ttasm.client.pojo;
 
 public class Ticket {
 
-    private String ticketId;
+    private String ticket_id;
 
-    private String trainNumber;
+    private String train_number;
 
     private String seat;
 
     private String state;
 
     public String getTicketId() {
-        return ticketId;
+        return ticket_id;
     }
 
     public void setTicketId(String ticketId) {
-        this.ticketId = ticketId == null ? null : ticketId.trim();
+        this.ticket_id = ticketId == null ? null : ticketId.trim();
     }
 
     public String getTrainNumber() {
-        return trainNumber;
+        return train_number;
     }
 
     public void setTrainNumber(String trainNumber) {
-        this.trainNumber = trainNumber == null ? null : trainNumber.trim();
+        this.train_number = trainNumber == null ? null : trainNumber.trim();
     }
 
     public String getSeat() {

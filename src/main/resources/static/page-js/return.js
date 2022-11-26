@@ -17,7 +17,9 @@ window.onload=function () {
             var len=data.length;
             for(var i=0;i<len;i++){
                 var option=option_example.cloneNode(true);
-                option.innerText=JSON.stringify(data[i]);
+                var str=JSON.stringify(data[i]);
+                str=str.slice(1,str.length-1);
+                option.innerText=str;
                 dataList.append(option);
             }
         },
@@ -31,7 +33,6 @@ function Return() {
 
     var str=document.getElementById("tickets").value;
     var ticket_id=str.split(" ")[0];
-
     var data = {
         "ticket_id" : ticket_id
     };
