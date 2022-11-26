@@ -33,8 +33,6 @@ function Return() {
 
     var str=document.getElementById("tickets").value;
     var ticket_id=str.split(" ")[0];
-    alert(str);
-    alert(ticket_id);
     var data = {
         "ticket_id" : ticket_id
     };

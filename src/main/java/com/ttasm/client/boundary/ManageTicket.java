@@ -21,8 +21,9 @@ public class ManageTicket {
         return ticketMapper.selectForSaleByTrainNumber(trainNumber);
     }
 
-    @RequestMapping("buyTicket")
-    public void buyTicket() {
-
+    @RequestMapping("checkTicket")
+    public String checkTicket(String ticket_id) {
+        Ticket ticket = ticketMapper.selectByPrimaryKey(ticket_id);
+        return ticket.getState();
     }
 }

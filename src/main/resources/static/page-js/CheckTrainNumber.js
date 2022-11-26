@@ -130,6 +130,32 @@ function buy_ticket(){
     var args=get_url_values();
     username=args["username"];
     var ticket_id=document.getElementById("seat").value;
-    var href=getCrossFieldNap()+"pay.html?username="+username+"&ticket_id="+ticket_id;
-    window.location=href;
+    var url = get_nap() + "ManageTicket/checkTicket";
+    var data = {
+        "ticket_id" : ticket_id
+    };
+    $.ajax({
+        type: "get",
+        url: url,
+        async: false,
+        data : data,
+        success: function(data){
+            if(data!=="for sale"){
+                alert("该票已被抢购");
+                var href= window.location.href;
+                window.location=href;
+                return false;
+            }
+            else{
+                var href=getCrossFieldNap()+"pay.html?username="+username+"&ticket_id="+ticket_id;
+                window.location=href;
+                return true;
+            }
+        },
+        error: function (error) {
+            alert(JSON.stringify(error));
+        }
+    });
+
+
 }
